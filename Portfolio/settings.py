@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'rup7@8xlcee#%1ouz9^m2!ey&_*^yj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['thawing-castle-27366.herokuapp.com', 'www.derekl.ca']
+ALLOWED_HOSTS = ['www.derekl.ca']
 
 
 # Application definition
