@@ -132,3 +132,6 @@ DATABASES['default'].update(db_from_env)
 
 os.environ['HTTPS'] = "on"
 os.environ['wsgi.url_scheme'] = 'https'
+
+SECURE_SSL_REDIRECT = True # [1]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
