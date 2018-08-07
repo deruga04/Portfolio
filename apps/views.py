@@ -4,5 +4,5 @@ from django.shortcuts import render
 def index(req):
     return render(req, 'index.html')
 
-def projects(req):
+def igbb(req):
     return render(req, 'igbb.html')
