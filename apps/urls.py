@@ -4,5 +4,5 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('igbb/', name='igbb')
+    path('igbb/',views.igbb, name='igbb')
 ]
