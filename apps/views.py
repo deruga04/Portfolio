@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 import random
 
 # Create your views here.
@@ -8,5 +9,5 @@ def index(req):
     return render(req, 'index.html', context={"greeting": random.choice(greetings)})
 
 
-def igbb(req):
-    return render(req, 'igbb.html')
+# def igbb(generic.ListView):
+#     return render(req, 'igbb.html')

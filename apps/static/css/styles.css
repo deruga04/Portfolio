@@ -1,7 +1,13 @@
+/*Teal is awesome.
+Visit https://www.colorhexa.com/008080 to see good color combinations.*/
+
 body{
-    background-color: #00264d;
+    background-color: #263238;
     width: 100%;
     height: 100%;
+}
+a{
+    color: #00cdcd;
 }
 #main{
     color: #eee;
