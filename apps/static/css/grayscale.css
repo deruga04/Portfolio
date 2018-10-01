@@ -1,3 +1,9 @@
+/*User defined styles*/
+
+a:hover, a:active, a:focus {
+  outline: 0;
+  text-decoration: none;
+}
 /*!
  * Start Bootstrap - Grayscale v5.0.2 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2018 Start Bootstrap
@@ -92,7 +98,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/mt-rundle.jpg");
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/mt_rundle.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -106,8 +112,8 @@
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   color: white;
+  margin: 0;
 }
-
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
@@ -140,6 +146,7 @@
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
+  /*padding: auto;*/
   font-family: 'Varela Round';
   font-size: 80%;
   text-transform: uppercase;
