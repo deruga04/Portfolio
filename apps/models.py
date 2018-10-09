@@ -35,4 +35,4 @@ class Photo(models.Model):
     )
 
     def __str__(self):
-        return f'{self.name}({self.year_in_school})' 
+        return f'{self.name}({self.photo_category})' 
