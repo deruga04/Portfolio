@@ -7,7 +7,7 @@ class Project(models.Model):
     description = models.TextField()
     link = models.URLField()
 
-    def __str__():
+    def __str__(self):
         return f'{self.name}: {self.description}'
 
 class Photo(models.Model):
@@ -34,5 +34,5 @@ class Photo(models.Model):
         default=MISC,
     )
 
-    def __str__():
+    def __str__(self):
         return f'{self.name}({self.year_in_school})' 
