@@ -26,23 +26,49 @@
     </head>
 
     <body id="page-top">
-        {% include 'nav.html' %}
+
         <!-- Navigation -->
-        
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Profile</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        </li>
+                    -->
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="{% static 'files/resume.pdf' %}">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#projects">Highlights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!-- Header -->
-        <header class="masthead">
+<!--         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
                     <h1 class="text-uppercase">Derek Li</h1>
                     <h2 class="text-white mx-auto mt-2 mb-5">software engineer</h2>
-                    <!-- <a href="#about" class="btn btn-primary js-scroll-trigger"><h1><i class="fas fa-file cv-icon"></i></h1></a> -->
+                    <a href="#about" class="btn btn-primary js-scroll-trigger"><h1><i class="fas fa-file cv-icon"></i></h1></a>
                     <a href="{% static 'files/resume.pdf' %}" class="mx-2 btn-primary btn">
                         View my resume
                     </a>
                 </div>
             </div>
-        </header>
+        </header> -->
 
         <!-- About Section -->
         <!--
@@ -72,11 +98,11 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Who I Am</h4>
-                            <p class="text-black-50 mb-0">I have a strong passion in computer security and penetration testing. I have a strong passion to keep the cyberstreets safe from cybercrimes.</p>
-                            <p class="text-black-50 mb-0">I have interests outisde of tech too, I guess:</p>
+                            <p class="text-black-50 mb-0">I have a strong passion in cybersecurity and penetration testing. I try to stay on top of latest exploits and new upcoming protocols.</p>
+                            <p class="text-black-50 mb-0">I guess I have interests outisde of tech too:</p>
                             <ul class="text-black-50 mb-0">
                                 <li>Photography</li>
-                                <li>태권도</li>
+                                <li>Martial arts</li>
                             </ul>
                         </div>
                     </div>
@@ -145,7 +171,58 @@
         -->
 
         <!-- Contact Section -->
-        {% include 'footer.html' %}
+        <section class="contact-section bg-black">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4">
+                                <div class="small text-black-50">21 Hillfarm Drive, Toronto ON</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4">
+                                <div class="small text-black-50">
+                                    <a href="#">derekli.3628{at}gmail{dot}com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4">
+                                <div class="small text-black-50">+1 (647) 960-3628</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social d-flex justify-content-center">
+                    <a href="https://www.linkedin.com/in/derekli-3628/" class="mx-2">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://gitlab.com/deruga" class="mx-2">
+                        <i class="fab fa-gitlab"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="bg-black small text-center text-white-50">
