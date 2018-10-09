@@ -5,7 +5,6 @@ from django.db import models
 class Project(models.Model):
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
     description = models.TextField()
-    image = models.ImageField()
     link = models.URLField()
 
     def __str__():
