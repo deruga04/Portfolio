@@ -14,13 +14,15 @@ class Photo(models.Model):
     PEOPLE = 'PE'
     LANDSCAPE = 'LA'
     CLOSE_UP = 'CL'
+    FOOD = 'FD'
     MISC = 'MS'
 
     YEAR_IN_SCHOOL_CHOICES = (
         (PEOPLE, 'People'),
         (LANDSCAPE, 'Landscape'),
         (CLOSE_UP, 'Close-up'),
-        (MISC, 'Misc')
+        (FOOD, 'Food'),
+        (MISC, 'Misc'),
     )
     
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
