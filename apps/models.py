@@ -8,7 +8,7 @@ class Project(models.Model):
     link = models.URLField()
 
     def __str__():
-        return f'{self.name}\n\n{self.description}'
+        return f'{self.name}: {self.description}'
 
 class Photo(models.Model):
     PEOPLE = 'PE'
@@ -17,7 +17,7 @@ class Photo(models.Model):
     FOOD = 'FD'
     MISC = 'MS'
 
-    YEAR_IN_SCHOOL_CHOICES = (
+    PHOTO_CATEGORY_CHOICES = (
         (PEOPLE, 'People'),
         (LANDSCAPE, 'Landscape'),
         (CLOSE_UP, 'Close-up'),
@@ -27,9 +27,9 @@ class Photo(models.Model):
     
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
     description = models.TextField()
-    year_in_school = models.CharField(
+    photo_category = models.CharField(
         max_length=2,
-        choices=YEAR_IN_SCHOOL_CHOICES,
+        choices=PHOTO_CATEGORY_CHOICES,
         default=MISC,
     )
 
