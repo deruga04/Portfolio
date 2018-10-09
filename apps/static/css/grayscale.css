@@ -4,6 +4,37 @@ a:hover, a:active, a:focus {
   outline: 0;
   text-decoration: none;
 }
+
+.photos-section {
+  padding: 10rem 0;
+}
+
+.photos-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .photos-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+}
+
+.photos-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .photos-section .project-text {
+    padding: 5rem;
+  }
+  .photos-section .project-text hr {
+    border-color: #64a19d;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
 /*!
  * Start Bootstrap - Grayscale v5.0.2 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2018 Start Bootstrap
