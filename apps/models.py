@@ -27,7 +27,7 @@ class Photo(models.Model):
     
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
     description = models.TextField()
-    photo_file = models.ImageField(upload_to='{{ STATIC_URL }}img/photos', default='{{ STATIC_URL }}img/banff_mountain.jpg')
+    photo_file = models.ImageField(upload_to='apps/static/img/photos', default='apps/static/img/banff_mountain.jpg')
     photo_category = models.CharField(
         max_length=2,
         choices=PHOTO_CATEGORY_CHOICES,

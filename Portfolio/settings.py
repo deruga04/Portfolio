@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'rup7@8xlcee#%1ouz9^m2!ey&_*^yj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 BASE_URL = "https://www.derekl.ca"
-ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com', '*']
+ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com']
 
 
 # Application definition
@@ -129,6 +129,8 @@ STATIC_URL = '/static/'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# SSL stuff, uncomment when done
 
 os.environ['HTTPS'] = "on"
 os.environ['wsgi.url_scheme'] = 'https'
