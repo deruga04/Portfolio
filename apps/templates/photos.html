@@ -58,7 +58,18 @@
 
         <section class="photos-section bg-light">
             <div class='container'>
-                Under construction lol
+                <h1>Photo List</h1>
+                {% if photo_list %}
+                <ul>
+                {% for ph in photo_list %}
+                    <li>
+                      <img src='apps/static/img/ipad.png'>
+                    </li>
+                {% endfor %}
+                </ul>
+                {% else %}
+                    <p>There are no photos in the library.</p>
+                {% endif %}
             </div>
         </section>
 

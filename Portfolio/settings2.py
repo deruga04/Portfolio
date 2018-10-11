@@ -23,11 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'rup7@8xlcee#%1ouz9^m2!ey&_*^yj2myv3g7rado^x9+ixj3')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# BASE_URL = "https://www.derekl.ca"
-# ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com']
+DEBUG = DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+BASE_URL = "https://www.derekl.ca"
+ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com']
 
-ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -133,14 +132,8 @@ DATABASES['default'].update(db_from_env)
 
 # SSL stuff, uncomment when done
 
-# os.environ['HTTPS'] = "on"
-# os.environ['wsgi.url_scheme'] = 'https'
+os.environ['HTTPS'] = "on"
+os.environ['wsgi.url_scheme'] = 'https'
 
-# SECURE_SSL_REDIRECT = True # [1]
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# CSRF_COOKIE_DOMAIN = 'localhost'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'apps/static')
-MEDIA_URL = '/media/'
-print(MEDIA_ROOT)
+SECURE_SSL_REDIRECT = True # [1]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

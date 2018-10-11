@@ -25,9 +25,9 @@ class Photo(models.Model):
         (MISC, 'Misc'),
     )
     
-    name = models.CharField(max_length=200, help_text='Enter a title for the project')
+    name = models.CharField(max_length=200, help_text='Enter a title')
     description = models.TextField()
-    photo_file = models.ImageField(upload_to='apps/static/img/photos', default='apps/static/img/banff_mountain.jpg')
+    photo_file = models.ImageField(upload_to='photos', default='apps/static/img/banff_mountain.jpg')
     photo_category = models.CharField(
         max_length=2,
         choices=PHOTO_CATEGORY_CHOICES,
