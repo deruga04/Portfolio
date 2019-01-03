@@ -27,7 +27,7 @@ DEBUG = True
 BASE_URL = "https://www.derekl.ca"
 ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com']
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['derekl.herokuapp.com', 'derekl.ca']
 
 # Application definition
 
