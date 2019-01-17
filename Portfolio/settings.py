@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'rup7@8xlcee#%1ouz9^m2!ey&_*^yj
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-BASE_URL = "https://www.derekl.ca"
+#BASE_URL = "https://www.derekl.ca"
 ALLOWED_HOSTS = ['www.derekl.ca', 'derekl.ca', 'localhost', 'thawing-castle-27366.herokuapp.com']
 
 ALLOWED_HOSTS = ['derekl.herokuapp.com', 'derekl.ca']
