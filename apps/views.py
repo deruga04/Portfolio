@@ -6,6 +6,9 @@ from apps.models import Photo
 def index(req):
     return render(req, 'index.html')
 
+def cert(req):
+    return render(req, 'cert.html')
+
 class PhotoListView(generic.ListView):
     model = Photo
     context_object_name = 'photo_list'
