@@ -56,14 +56,14 @@
             </div>
         </nav>
 
-        <section class="photos-section bg-light">
+        <section class="projects-section bg-light">
             <div class='container'>
-                <h1>Photo List</h1>
-                {% if photo_list %}
+                <h1>Project List</h1>
+                {% if project_list %}
                 <ul>
-                {% for ph in photo_list %}
+                {% for project in project_list %}
                     <li>
-                        {{}}
+                      {{project.name}}
                     </li>
                 {% endfor %}
                 </ul>
@@ -73,7 +73,7 @@
             </div>
         </section>
 
-        {% include 'footer.html' %}
+          {% include 'footer.html' %}
         <!-- Footer -->
         <footer class="bg-black small text-center text-white-50">
    <!--          <div class="container">
