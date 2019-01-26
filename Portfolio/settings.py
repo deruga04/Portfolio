@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'rup7@8xlcee#%1ouz9^m2!ey&_*^yj2myv3g7rado^x9+ixj3')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #BASE_URL = "https://www.derekl.ca"
 
 ALLOWED_HOSTS = ['derekl.herokuapp.com', 'www.derekl.ca', 'derekl.ca', 'localhost']
@@ -81,7 +81,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

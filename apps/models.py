@@ -5,36 +5,29 @@ from django.db import models
 class Project(models.Model):
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
     description = models.TextField()
-    pic = models.ImageField(default='apps/static/img/banff_mountain.jpg')
     link = models.URLField()
 
     def __str__(self):
         return f'{self.name}: {self.description}'
 
-# class Photo(models.Model):
-#     PEOPLE = 'PE'
-#     LANDSCAPE = 'LA'
-#     CLOSE_UP = 'CL'
-#     FOOD = 'FD'
-#     MISC = 'MS'
+class Photo(models.Model):
+    PEOPLE = 'PE'
+    LANDSCAPE = 'LA'
+    CLOSE_UP = 'CL'
+    FOOD = 'FD'
+    MISC = 'MS'
 
-#     PHOTO_CATEGORY_CHOICES = (
-#         (PEOPLE, 'People'),
-#         (LANDSCAPE, 'Landscape'),
-#         (CLOSE_UP, 'Close-up'),
-#         (FOOD, 'Food'),
-#         (MISC, 'Misc'),
-#     )
+    PHOTO_CATEGORY_CHOICES = (
+        (PEOPLE, 'People'),
+        (LANDSCAPE, 'Landscape'),
+        (CLOSE_UP, 'Close-up'),
+        (FOOD, 'Food'),
+        (MISC, 'Misc'),
+    )
     
-#     name = models.CharField(max_length=200, help_text='Enter a title')
-#     description = models.TextField()
-#     photo_file = models.ImageField(upload_to='photos', default='apps/static/img/banff_mountain.jpg')
-#     photo_category = models.CharField(
-#         max_length=2,
-#         choices=PHOTO_CATEGORY_CHOICES,
-#         default=MISC,
-#     )
+    name = models.CharField(max_length=200, help_text='Enter a title')
+    description = models.TextField()
 
-#     def __str__(self):
-#         return f'{self.name}({self.photo_category})' 
+    def __str__(self):
+        return f'{self.name}({self.photo_category})' 
 
