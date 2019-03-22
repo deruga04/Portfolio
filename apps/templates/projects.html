@@ -9,9 +9,13 @@
         <meta name="author" content="">
 
         <title>Howdy, Stranger</title>
+        
+        {% load static %}
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static '/img/favicon.ico'%}"/>
 
         <!-- Bootstrap core CSS -->
-        {% load static %}
+        
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
         <!-- Custom fonts for this template -->
@@ -22,6 +26,7 @@
         <!-- Custom styles for this template -->
 
         <link rel="stylesheet" href="{% static 'css/grayscale.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-extend.css' %}">
 
     </head>
 
@@ -60,11 +65,21 @@
             <div class='container'>
                 <h1>Project List</h1>
                 {% if project_list %}
-                <ul>
+                <div class='container-fluid'>
+                    {% for project in project_list %}
+                    <div class="card col-sm-4">
+                        <img class="card-img-top" src="{{project.image.url}}" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">{{project.name}}</h4>
+                          <p class="card-text">{{project.description}}</p>
+                          <button type='button' class='btn' href='{{project.source}}'>Source</button>
+                          <button type='button' class='btn' href='{{project.link}}'>View</button>
+                        </div>
+                      </div>
+                    {% endfor %}
+                </div>
                 {% for project in project_list %}
-                    <li>
-                      {{project.name}}
-                    </li>
+                    
                 {% endfor %}
                 </ul>
                 {% else %}

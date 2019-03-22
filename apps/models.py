@@ -1,11 +1,15 @@
+import uuid
 from django.db import models
 
 # Create your models here.
 
 class Project(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=200, help_text='Enter a title for the project')
     description = models.TextField()
     link = models.URLField()
+    source = models.URLField(default='')
+    image = models.ImageField(upload_to='img/project_thumbnails', default='img/banff_mountain.jpg')
 
     def __str__(self):
         return f'{self.name}: {self.description}'
