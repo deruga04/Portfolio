@@ -1,111 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base_generic.html" %}
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Howdy, Stranger</title>
-        
-        {% load static %}
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="{% static '/img/favicon.ico'%}"/>
-
-        <!-- Bootstrap core CSS -->
-        
-        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-        <!-- Custom fonts for this template -->
-        <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-        <!-- Custom styles for this template -->
-
-        <link rel="stylesheet" href="{% static 'css/grayscale.css' %}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap-extend.css' %}">
-
-    </head>
-
-    <body id="page-top">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Profile</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                        </li>
-                    -->
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="{% static 'files/resume.pdf' %}">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#projects">Highlights</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
-                        </li>
-                    </ul>
+{% block content %}
+<section class="projects-section bg-light">
+    <div class='container'>
+        <h1>Project List</h1>
+        {% if project_list %}
+        <div class='container-fluid'>
+            {% for project in project_list %}
+            <div class="card col-sm-4">
+                <img class="card-img-top" src="{{project.image.url}}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">{{project.name}}</h4>
+                    <p class="card-text">{{project.description}}</p>
+                    <button type='button' class='btn' href='{{project.source}}'>Source</button>
+                    <button type='button' class='btn' href='{{project.link}}'>View</button>
                 </div>
-            </div>
-        </nav>
-
-        <section class="projects-section bg-light">
-            <div class='container'>
-                <h1>Project List</h1>
-                {% if project_list %}
-                <div class='container-fluid'>
-                    {% for project in project_list %}
-                    <div class="card col-sm-4">
-                        <img class="card-img-top" src="{{project.image.url}}" alt="Card image">
-                        <div class="card-body">
-                          <h4 class="card-title">{{project.name}}</h4>
-                          <p class="card-text">{{project.description}}</p>
-                          <button type='button' class='btn' href='{{project.source}}'>Source</button>
-                          <button type='button' class='btn' href='{{project.link}}'>View</button>
-                        </div>
-                      </div>
-                    {% endfor %}
                 </div>
-                {% for project in project_list %}
-                    
-                {% endfor %}
-                </ul>
-                {% else %}
-                    <p>I have no projects lol</p>
-                {% endif %}
-            </div>
-        </section>
+            {% endfor %}
+        </div>
+        {% for project in project_list %}
+            
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>I have no projects lol</p>
+        {% endif %}
+    </div>
+</section>
 
-          {% include 'footer.html' %}
-        <!-- Footer -->
-        <footer class="bg-black small text-center text-white-50">
-   <!--          <div class="container">
-                Copyright &copy; Your Website 2018
-            </div> -->
-        </footer>
-
-        <!-- Bootstrap core JavaScript -->
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-        <!-- Custom scripts for this template -->
-        <script src="{% static 'js/grayscale.min.js' %}"></script>
-
-    </body>
-
-</html>
+{% endblock %}
+    
