@@ -1,10 +1,28 @@
 from django.shortcuts import render
 from django.views import generic
 from apps.models import Project
+import requests
 
 # Create your views here.
 def index(req):
-    return render(req, 'index.html')
+    r = requests.get('http://quotes.rest/qod').json()
+    
+    # quote = r['contents']
+    # quote_author = ''
+
+    try:
+        quote = r['contents']
+        # quote_author = r['contents']['quotes'][0]['author']
+    except KeyError:
+        quote = 'You miss 100% of the shots you don\'t take - Wayne Gretzky'
+        quote_author = 'Michael Scott'
+
+    context = {
+        'quote': quote,
+        'quote_author': quote_author,
+    }
+
+    return render(req, 'index.html', context=context)
 
 def cert(req):
     return render(req, 'cert.html')
