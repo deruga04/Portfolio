@@ -12,7 +12,7 @@ def index(req):
 
     try:
         quote = r['contents']
-        # quote_author = r['contents']['quotes'][0]['author']
+        quote_author = r['contents']['quotes'][0]['author']
     except KeyError:
         quote = 'You miss 100% of the shots you don\'t take - Wayne Gretzky'
         quote_author = 'Michael Scott'
