@@ -13,11 +13,8 @@ a:hover, a:active, a:focus {
   padding: 2rem;
 }
 
-@media (min-width: 992px) {
-  .photos-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
+.card{
+  padding: 0;
 }
 
 .photos-section .project-text {
@@ -26,6 +23,10 @@ a:hover, a:active, a:focus {
 }
 
 @media (min-width: 992px) {
+  .photos-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
   .photos-section .project-text {
     padding: 5rem;
   }
@@ -35,6 +36,9 @@ a:hover, a:active, a:focus {
     width: 30%;
   }
 }
+
+
+
 /*!
  * Start Bootstrap - Grayscale v5.0.2 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2018 Start Bootstrap
@@ -43,7 +47,8 @@ a:hover, a:active, a:focus {
 
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #mainNav .navbar-toggler {
