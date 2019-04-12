@@ -35,10 +35,12 @@ def handler404(request, *args, **argv):
 #     queryset = Photo.objects
 #     template_name = 'photos.html'
 
-class ProjectListView(generic.ListView):
-    model = Project
-    context_object_name = 'project_list'
-    template_name = 'projects.html'
+def projects(request):
+    projects = Project.objects
+    context = {
+        'projects': projects
+    }
+    return render(request, 'projects.html', context=context)
 
 
 # def igbb(generic.ListView):

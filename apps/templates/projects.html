@@ -4,9 +4,9 @@
 <section class="projects-section bg-light">
     <div class='container'>
         <h1>Project List</h1>
-        {% if project_list %}
+        {% if projects %}
         <div class='container-fluid'>
-            {% for project in project_list %}
+            {% for project in projects.all %}
             <div class="card col-sm-4">
                 <img class="card-img-top" src="{{project.image.url}}" alt="Card image">
                 <div class="card-body">
@@ -15,12 +15,9 @@
                     <button type='button' class='btn' href='{{project.source}}'>Source</button>
                     <button type='button' class='btn' href='{{project.link}}'>View</button>
                 </div>
-                </div>
+            </div>
             {% endfor %}
         </div>
-        {% for project in project_list %}
-            
-        {% endfor %}
         </ul>
         {% else %}
             <p>I have no projects lol</p>
