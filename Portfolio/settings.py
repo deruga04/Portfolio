@@ -139,6 +139,5 @@ DATABASES['default'].update(db_from_env)
 
 # CSRF_COOKIE_DOMAIN = 'localhost'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'apps/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'apps/media')
 MEDIA_URL = '/media/'
-print(MEDIA_ROOT)
