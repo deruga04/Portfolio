@@ -43,7 +43,7 @@ def projects(request):
     return render(request, 'projects.html', context=context)
 
 def acme(request):
-    return 'pCcUIubCdKXn-OsGPbVA81vU8LZwqKnzakNRESpAF74.stJdK5-9wB6luidbkIffaMMfstLUFigaPbNn-Jb36uM'
+    return render(request, 'acme.html')
 
 # def igbb(generic.ListView):
 #     return render(req, 'igbb.html')
